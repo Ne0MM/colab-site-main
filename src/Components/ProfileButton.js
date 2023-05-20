@@ -1,3 +1,7 @@
+import Link from 'next/link'
+import styles from './ComponentStyles/ProfileButton.module.css'
+
+
 export default function profileButton(props) {
 
     if(props.username === undefined) {
@@ -5,7 +9,19 @@ export default function profileButton(props) {
         return(
 
             <div>
-                NAO CONECTADO
+                <Link 
+                href='/cadastro'
+                className={styles.signUpButton}
+                >
+                    Cadastro
+                </Link>
+
+                <Link 
+                href='/login' 
+                className={styles.loginButton}
+                >
+                    Login
+                </Link>
             </div>            
 
         )
@@ -13,10 +29,11 @@ export default function profileButton(props) {
     }
 
   return (
-    <div>
-
-        CONECTADO
-
-    </div>
+    <Link
+    href='/jogar'
+    className={styles.signedButton}
+    >
+        Jogos
+    </Link>
   )
 }

@@ -14,6 +14,7 @@ function login() {
 
     }
 
+    //Setar o novo token puxado do backEnd
     const submitToken = async (submitToken) => {
 
         const newToken = await fetch('/api/authToken', {
@@ -40,6 +41,7 @@ function login() {
 
     }
 
+    //Tentar POST na api de login do backend e puxar um token de autenticacao valido
     const handleSubmit = async () => {
 
         const token = await fetch('http://colabeduc.org/api/login',{
