@@ -92,30 +92,37 @@
 }
 
 .colabStats{
-    background-color: #FAF5FF;
     padding: 0rem 0.5rem;
     border-radius: 20px;
+    background-color: #FAF5FF;
     width: 13rem;
     height: 7rem;
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: space-evenly;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .colabStats h1{
     font-size: 0.9rem;
     letter-spacing: 0.1rem;
     text-align: center;
-    color: #8000ff;
+    color: #0e0e0e;
+    z-index: 1;
 }
 
 .colabStats span{
     font-size: 1.25rem;
     letter-spacing: 0.1rem;
     color: #0e0e0e;
+    z-index: 1;
 }
 
+.statsIcon{
+    position: absolute;
+    filter: invert(10%) sepia(98%) saturate(6458%) hue-rotate(272deg) brightness(104%) contrast(121%) opacity(0.5);
+}
 
 /* NEWS */
 

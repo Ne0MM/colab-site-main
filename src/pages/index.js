@@ -109,6 +109,14 @@ export default function Home() {
 
             <div className={styles.colabStats}>
 
+              <Image
+              src="/coding.png"
+              width={64}
+              height={64}
+              alt="coding icon"
+              className={styles.statsIcon}
+              />
+
               <h1>
                 DESENVOLVEDORES DE GAMES
               </h1>
@@ -120,6 +128,14 @@ export default function Home() {
             </div>
             
             <div className={styles.colabStats}>
+
+              <Image
+              src="/description.png"
+              width={64}
+              height={64}
+              alt="description icon"
+              className={styles.statsIcon}
+              />
 
               <h1>
                 DESCRIÇÕES DE GAMES
@@ -133,6 +149,14 @@ export default function Home() {
 
             <div className={styles.colabStats}>
 
+              <Image
+              src="/idea.png"
+              width={64}
+              height={64}
+              alt="idea icon"
+              className={styles.statsIcon}
+              />
+
               <h1>
                 PROJETOS DE GAMES
               </h1>
@@ -144,6 +168,14 @@ export default function Home() {
             </div>
 
             <div className={styles.colabStats}>
+
+              <Image
+              src="/skills.png"
+              width={64}
+              height={64}
+              alt="skills icon"
+              className={styles.statsIcon}
+              />
 
               <h1>
                 HABILIDADES BNCC CONTEMPLADAS
