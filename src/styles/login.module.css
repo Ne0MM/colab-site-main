@@ -1,0 +1,138 @@
+.mainPage{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(45deg, #8000FF, #A64DFF);
+    display: flex;
+    flex-flow: column;
+}
+
+.loginContainer{
+    max-height: 800px;
+    max-width: 1100px;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+    background-image: linear-gradient(100deg, white, white 39.5%,#FAF5FF 40%);
+}
+
+.loginWrapper{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.loginUsername,
+.loginPassword{
+    background-color: white;
+    margin-top: 1rem;
+    padding: 1rem 1rem;
+    width: 70%;
+    border: none;
+    border-bottom: 1px solid #cccccc;
+}
+
+.loginUsername{
+    margin-bottom: 1rem;
+}
+
+.loginUsername:focus,
+.loginPassword:focus{
+    outline: none;
+}
+
+.submitButton{
+    background-image: linear-gradient(45deg, #8000FF, #A64DFF);
+    border: none;
+    margin-top: 2rem;
+    padding: 1rem 1rem;
+    width: 70%;
+    border-radius: 15px;
+    transition: ease-in-out 200ms;
+}
+
+.submitButton:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.formWrapper{
+    display: flex;
+    width: 100%;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.formWrapper span{
+    width: 70%;
+    font-size: 0.8rem;
+    color: #bbbbbb;
+}
+
+.titleWrapper{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recoveryLink{
+    text-decoration: none;
+    font-size: 0.8rem;    
+    color: #8000FF;
+    text-align: end;
+    margin-top: 0.5rem;
+}
+
+.underPassword{
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.passwordSee{
+    height: 80%;
+    width: 1rem;
+    background-color: red;
+    border: none;
+}
+
+.passwordSee:hover{
+    cursor: pointer;
+}
+
+/* LOGO WRAPPER */
+
+.logoWrapper{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.logoContainer{
+    width: 100%;
+    height: 20%;
+}
+
+.textContainer{
+    text-align: center;
+    width: 100%;
+    color: #8000FF;
+}
+
+.textContainer h1{
+    font-size: 2rem;
+}
+
+.textContainer span{
+    font-size: 1rem;
+}

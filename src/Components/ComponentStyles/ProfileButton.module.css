@@ -5,15 +5,20 @@
     padding: 0.5rem 1rem;
     border-radius: 20px;
     border: none;
-    background-color: #FAF5FF;
+    background-color: #faf5ff;
     color: #8000ff;
     text-decoration: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: ease-in-out 200ms;
 }
 
 .signUpButton:hover,
 .loginButton:hover,
-.signedButton{
+.signedButton:hover{
     cursor: pointer;
+    font-size: 1.1rem;
+    padding: 0.55rem 1.1rem;
+    background-color: #e2dee7;
 }
 
 .signUpButton{

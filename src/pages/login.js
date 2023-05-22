@@ -1,10 +1,15 @@
-import { useState } from "react"
+import { useRef, useState } from "react"
+import style from '../styles/login.module.css'
+import Link from "next/link";
+import LIttleHeader from "@/Components/LIttleHeader";
+import StaticLogo from "@/Components/StaticLogo";
 
 function login() {
 
     const [authToken, setAuthToken] = useState("NULL");
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [passwordSee, setPasswordSee] = useState("password");
 
     const fetchToken = async () => {
 
@@ -63,42 +68,97 @@ function login() {
 
         }catch(e){
 
-            console.log("handle submit error")
+            console.log("handle submit error");
 
         }
 
     }
 
+    //Botao para ver a senha
+    const handlePasswordSee = () => {
+
+        if(passwordSee === "text"){setPasswordSee("password");}
+        else{setPasswordSee("text");}
+
+    }
+
   return (
-    <div>
+    <div className={style.mainPage}>
 
-        <div>
+        <LIttleHeader/>
 
-            <button
-            onClick={fetchToken}
-            >teste</button>
+        <div className={style.loginContainer}>
 
-            <button
-            onClick={() => console.log(authToken)}
-            >
-                teste 2
-            </button>
+            <div className={style.loginWrapper}>
 
-            <input 
-            type="text" 
-            value={username}
-            onChange={handleUsername}
-            />
+                <div className={style.titleWrapper}>
 
-            <input 
-            type="password" 
-            value={password}
-            onChange={handlePassword}
-            />
+                    <h1>Login</h1>
 
-            <button
-            onClick={handleSubmit}
-            > submit </button>
+                </div>
+
+                <div className={style.formWrapper}>
+
+                    <span>Nome de usuario</span>
+
+                    <input 
+                    type="text" 
+                    value={username}
+                    onChange={handleUsername}
+                    className={style.loginUsername}
+                    placeholder="Nome de usuario"
+                    />
+
+                    <span>Senha</span>
+
+                    <input 
+                    type={passwordSee}
+                    value={password}
+                    onChange={handlePassword}
+                    className={style.loginPassword}
+                    placeholder="Senha"
+                    >
+                    </input>
+
+                    <div className={style.underPassword}>
+
+                        <button
+                        className={style.passwordSee}
+                        onClick={handlePasswordSee}
+                        />
+
+                        <Link
+                        href="/passwordRecovery"
+                        className={style.recoveryLink}
+                        >
+                        Esqueceu a senha?
+                        </Link>
+
+                    </div>
+
+                    <button
+                    onClick={handleSubmit}
+                    className={style.submitButton}
+                    > Entrar </button>
+
+                </div>
+
+            </div>
+
+            <div className={style.logoWrapper}>
+
+                <div className={style.logoContainer}>
+
+                    <StaticLogo/>
+
+                    <div className={style.textContainer}>
+                        <h1>ColabEduc</h1>
+                        <span>Juntos, Construindo a educação</span>
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 

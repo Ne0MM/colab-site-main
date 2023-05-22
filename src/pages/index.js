@@ -4,6 +4,7 @@ import ProfileButton from "../Components/ProfileButton"
 import styles from '../styles/Home.module.css'
 import StaticLogo from "@/Components/StaticLogo";
 import Link from "next/link";
+import LIttleHeader from "@/Components/LIttleHeader";
 
 export default function Home() {
 
@@ -32,40 +33,7 @@ export default function Home() {
 
       <div className={styles.homeInfo}>
 
-        <header className={styles.header}>
-
-          <div className={styles.headerIcons}>
-            
-            <Link
-            href="https://www.instagram.com/colabeduc/"
-            target="_blank"
-            className={styles.instagramIcon}
-            >
-
-              <Image
-              src="/instagramIcon.svg"
-              width={24}
-              height={24}
-              alt="instagram icon"
-              />
-
-            </Link>
-
-            <div className={styles.headerLeft}>
-
-              <span>
-                Sobre Nós
-              </span>
-
-              <span>
-                Contato
-              </span>
-
-            </div>
-
-          </div>
-
-        </header>
+        <LIttleHeader/>
 
         <div className={styles.infoWrapper}>
 
@@ -122,7 +90,7 @@ export default function Home() {
               </h1>
 
               <span>
-                2,874
+                2874
               </span>
 
             </div>
@@ -142,7 +110,7 @@ export default function Home() {
               </h1>
 
               <span>
-                1,290
+                1290
               </span>
 
             </div>
@@ -162,7 +130,7 @@ export default function Home() {
               </h1>
 
               <span>
-                1,118
+                1118
               </span>
 
             </div>
