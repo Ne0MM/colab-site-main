@@ -28,7 +28,7 @@ export default function Home() {
 
     useEffect(() => {
       fetchToken();
-    },[])
+    },[userName])
 
     //Muda a posicao das imagens do carrosel
     const handleCarrousel = (position) => {

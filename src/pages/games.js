@@ -50,7 +50,7 @@ export default function Games() {
 
         fetchToken();
 
-    },[])
+    },[gameList])
 
   return (
     <div className={styles.mainPage}>
