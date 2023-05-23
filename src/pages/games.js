@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { React, useEffect, useState } from 'react';
 import styles from '../styles/games.module.css'
 import LIttleHeader from "@/Components/LIttleHeader";
 import GameListRender from '@/Components/GameListRender';

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { React, useEffect, useState } from "react";
 import Image from "next/image";
 import ProfileButton from "../Components/ProfileButton"
 import styles from '../styles/Home.module.css'

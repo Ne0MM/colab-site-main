@@ -1,11 +1,10 @@
-import { useEffect, useState } from "react"
+import { React , useEffect, useState } from "react"
 import style from '../styles/login.module.css'
 import Link from "next/link";
 import LIttleHeader from "@/Components/LIttleHeader";
 import StaticLogo from "@/Components/StaticLogo";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import Footer from "@/Components/Footer";
 
 function login() {
 

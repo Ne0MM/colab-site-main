@@ -1,3 +1,4 @@
+import React from 'react'
 import styles from './ComponentStyles/StaticLogo.module.css'
 
 export default function StaticLogo() {
