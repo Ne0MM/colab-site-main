@@ -3,7 +3,6 @@ import Image from "next/image";
 import ProfileButton from "../Components/ProfileButton"
 import styles from '../styles/Home.module.css'
 import StaticLogo from "@/Components/StaticLogo";
-import Link from "next/link";
 import LIttleHeader from "@/Components/LIttleHeader";
 
 export default function Home() {
@@ -20,7 +19,7 @@ export default function Home() {
         const newAuthToken = await fetch('/api/authToken');
         const jsonAuthToken = await newAuthToken.json();
         setAuthToken(jsonAuthToken.access_token);
-        setUsername(jsonAuthToken.username)
+        setUsername(jsonAuthToken.username);
 
     }
 
@@ -77,6 +76,10 @@ export default function Home() {
 
             <div className={styles.colabStats}>
 
+              <h1>
+                DESENVOLVEDORES DE GAMES
+              </h1>
+
               <Image
               src="/coding.png"
               width={64}
@@ -84,10 +87,6 @@ export default function Home() {
               alt="coding icon"
               className={styles.statsIcon}
               />
-
-              <h1>
-                DESENVOLVEDORES DE GAMES
-              </h1>
 
               <span>
                 2874
@@ -97,6 +96,10 @@ export default function Home() {
             
             <div className={styles.colabStats}>
 
+              <h1>
+                DESCRIÇÕES DE GAMES
+              </h1>
+
               <Image
               src="/description.png"
               width={64}
@@ -104,10 +107,6 @@ export default function Home() {
               alt="description icon"
               className={styles.statsIcon}
               />
-
-              <h1>
-                DESCRIÇÕES DE GAMES
-              </h1>
 
               <span>
                 1290
@@ -117,6 +116,10 @@ export default function Home() {
 
             <div className={styles.colabStats}>
 
+              <h1>
+                PROJETOS DE GAMES
+              </h1>
+
               <Image
               src="/idea.png"
               width={64}
@@ -124,10 +127,6 @@ export default function Home() {
               alt="idea icon"
               className={styles.statsIcon}
               />
-
-              <h1>
-                PROJETOS DE GAMES
-              </h1>
 
               <span>
                 1118
@@ -137,6 +136,10 @@ export default function Home() {
 
             <div className={styles.colabStats}>
 
+              <h1>
+                HABILIDADES BNCC CONTEMPLADAS
+              </h1>
+
               <Image
               src="/skills.png"
               width={64}
@@ -144,11 +147,7 @@ export default function Home() {
               alt="skills icon"
               className={styles.statsIcon}
               />
-
-              <h1>
-                HABILIDADES BNCC CONTEMPLADAS
-              </h1>
-
+              
               <span>
                 680
               </span>
@@ -163,7 +162,13 @@ export default function Home() {
 
       <div className={styles.newsWrapper}>
 
-        <div className={styles.newsCarrousel}>
+        <div className={styles.newsCarrouselContainer}>
+
+          <div className={styles.newsCarrousel}>
+
+            
+
+          </div>
 
         </div>
 
