@@ -1,0 +1,17 @@
+.mainPage{
+    background-image: linear-gradient(45deg, #8000ff, #A64DFF);
+    padding-bottom: 2rem;
+    overflow-x: hidden;
+}
+
+.logoContainer{
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    color: #F5F5FF;
+    text-decoration: none;
+}
+
+.logoWrapper{
+    margin-right: 2rem;
+}

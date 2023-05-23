@@ -10,7 +10,7 @@ export default function profileButton(props) {
 
             <div>
                 <Link 
-                href='/cadastro'
+                href='/register'
                 className={styles.signUpButton}
                 >
                     Cadastro
@@ -30,7 +30,7 @@ export default function profileButton(props) {
 
   return (
     <Link
-    href='/jogar'
+    href='/games'
     className={styles.signedButton}
     >
         Jogos

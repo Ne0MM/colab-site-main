@@ -17,6 +17,7 @@
     align-items: center;
     border-radius: 15px;
     background-image: linear-gradient(100deg, white, white 39.5%,#FAF5FF 40%);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .loginWrapper{
@@ -44,10 +45,12 @@
 .loginUsername:focus,
 .loginPassword:focus{
     outline: none;
+    border-color: #8000FF;
 }
 
 .submitButton{
     background-image: linear-gradient(45deg, #8000FF, #A64DFF);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border: none;
     margin-top: 2rem;
     padding: 1rem 1rem;
@@ -59,7 +62,9 @@
 .submitButton:hover{
     cursor: pointer;
     transform: scale(1.05);
+    filter: brightness(1.15);
 }
+
 
 .formWrapper{
     display: flex;
@@ -81,6 +86,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #8000FF;
 }
 
 .recoveryLink{
@@ -88,7 +94,6 @@
     font-size: 0.8rem;    
     color: #8000FF;
     text-align: end;
-    margin-top: 0.5rem;
 }
 
 .underPassword{
@@ -96,17 +101,32 @@
     width: 70%;
     justify-content: space-between;
     align-items: center;
+    margin-top: 0.5rem;
 }
 
 .passwordSee{
-    height: 80%;
-    width: 1rem;
-    background-color: red;
     border: none;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .passwordSee:hover{
     cursor: pointer;
+}
+
+.passwordSeeImg{
+    filter: invert(27%) sepia(97%) saturate(7490%) hue-rotate(271deg) brightness(91%) contrast(130%);
+}
+
+.submitError{
+    color: #8000FF;
+    width: 70%;
+    font-size: 0.8rem;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 /* LOGO WRAPPER */
@@ -115,12 +135,18 @@
     width: 60%;
     height: 100%;
     display: flex;
-    align-items: flex-start;
 }
 
 .logoContainer{
     width: 100%;
-    height: 20%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+}
+
+.logoLink{
+    text-decoration: none;
 }
 
 .textContainer{
@@ -135,4 +161,34 @@
 
 .textContainer span{
     font-size: 1rem;
+}
+
+.registerContainer{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 100%;
+}
+
+.colabContainer{
+    transform: scale(1.5);
+}
+
+.registerButton{
+    width: 40%;
+    margin-top: 1rem;
+    padding: 1rem 0rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    background-image: linear-gradient(45deg, #8000FF, #A64DFF);
+    transition: ease-in-out 200ms;
+}
+
+.registerButton:hover{
+    transform: scale(1.05);
+    filter: brightness(1.15);
 }

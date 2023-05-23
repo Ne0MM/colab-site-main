@@ -1,8 +1,10 @@
-import { useRef, useState } from "react"
+import { useEffect, useState } from "react"
 import style from '../styles/login.module.css'
 import Link from "next/link";
 import LIttleHeader from "@/Components/LIttleHeader";
 import StaticLogo from "@/Components/StaticLogo";
+import Image from "next/image";
+import { useRouter } from "next/router";
 
 function login() {
 
@@ -10,14 +12,29 @@ function login() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [passwordSee, setPasswordSee] = useState("password");
+    const [passwordImg, setPasswordImg] = useState("hide.png");
+    const [passwordAlert, setPasswordAlert] = useState(false);
+    const router = useRouter();
 
     const fetchToken = async () => {
 
         const newAuthToken = await fetch('/api/authToken');
         const jsonAuthToken = await newAuthToken.json();
-        setAuthToken(jsonAuthToken);
+        setAuthToken(jsonAuthToken.access_token);
+
+        if(jsonAuthToken.access_token !== undefined){
+
+            router.push("/");
+
+        }
 
     }
+
+    useEffect(() => {
+
+        fetchToken();
+
+    },[])
 
     //Setar o novo token puxado do backEnd
     const submitToken = async (submitToken) => {
@@ -65,10 +82,11 @@ function login() {
             
             const submitResponse = await token.json();
             submitToken(submitResponse);
+            router.push('/')
 
         }catch(e){
 
-            console.log("handle submit error");
+            setPasswordAlert(true);
 
         }
 
@@ -77,8 +95,18 @@ function login() {
     //Botao para ver a senha
     const handlePasswordSee = () => {
 
-        if(passwordSee === "text"){setPasswordSee("password");}
-        else{setPasswordSee("text");}
+        if(passwordSee === "text"){
+
+            setPasswordSee("password");
+            setPasswordImg("hide.png");
+
+        }
+        else{
+
+            setPasswordSee("text");
+            setPasswordImg("view.png")
+
+        }
 
     }
 
@@ -98,6 +126,14 @@ function login() {
                 </div>
 
                 <div className={style.formWrapper}>
+
+                    {passwordAlert &&
+                    <p
+                    className={style.submitError}
+                    >
+                        Seu nome de usuário ou senha podem estar incorretos
+                    </p>
+                    }
 
                     <span>Nome de usuario</span>
 
@@ -125,13 +161,21 @@ function login() {
                         <button
                         className={style.passwordSee}
                         onClick={handlePasswordSee}
-                        />
+                        >
+                            <Image
+                            src={`/${passwordImg}`}
+                            width={24}
+                            height={24}
+                            alt="password view indicator"
+                            className={style.passwordSeeImg}
+                            />
+                        </button>
 
                         <Link
                         href="/passwordRecovery"
                         className={style.recoveryLink}
                         >
-                        Esqueceu a senha?
+                        Esqueceu sua senha?
                         </Link>
 
                     </div>
@@ -149,11 +193,35 @@ function login() {
 
                 <div className={style.logoContainer}>
 
-                    <StaticLogo/>
+                    <div className={style.colabContainer}>
+
+                        <Link
+                        href="/"
+                        className={style.logoLink}
+                        >
+                        
+                            <StaticLogo/>
+
+                        </Link>
+
+                    </div>
 
                     <div className={style.textContainer}>
                         <h1>ColabEduc</h1>
                         <span>Juntos, Construindo a educação</span>
+                    </div>
+
+                    <div className={style.registerContainer}>
+
+                        <span className={style.textContainer}>Ainda não possui conta?</span>
+
+                        <Link 
+                        className={style.registerButton}
+                        href="/register"
+                        >
+                            Cadastro
+                        </Link>
+
                     </div>
 
                 </div>

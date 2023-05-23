@@ -1,0 +1,70 @@
+.gameRow{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem;
+}
+
+.gameContainer{
+    width: 26%;
+    display: flex;
+    flex-flow: column;
+    background-color: #A64DFF;
+    border-radius: 15px;
+    padding: 10px 10px;
+    z-index: 2;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.gameCard{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 20px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gameTitle{
+    width: 100%;
+    text-align: center;
+    color: #F5F5FF;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.gameVideo{
+    border-radius: 15px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.loadingShow{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jogarButton{
+    height: 2rem;
+    width: 50%;
+    margin: auto;
+    margin-top: 10px;
+    border: none;
+    background-image: linear-gradient(45deg, #8000FF, #8000ffb7);
+    color : #F5F5FF;
+    border-radius: 10px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: ease-in-out 200ms;
+}
+
+.jogarButton:hover{
+    transform: scale(0.95);
+    filter: brightness(1.2);
+}

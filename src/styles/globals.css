@@ -4,3 +4,27 @@
     box-sizing: border-box;
     font-family: 'Noto Sans', sans-serif;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #F5F5FF;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #A64DFF;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #8000FF;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}

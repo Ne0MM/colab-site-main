@@ -59,11 +59,10 @@
 }
 
 .colabStats{
-    padding: 0rem 0.5rem;
+    padding: 0.5rem 0.5rem;
     border-radius: 20px;
     background-color: #FAF5FF;
     width: 13rem;
-    height: 7rem;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -87,7 +86,6 @@
 }
 
 .statsIcon{
-    position: absolute;
     filter: invert(10%) sepia(98%) saturate(6458%) hue-rotate(272deg) brightness(104%) contrast(121%) opacity(0.5);
 }
 
@@ -99,7 +97,7 @@
     background-color: #FAF5FF;
 }
 
-.newsCarrousel{
+.newsCarrouselContainer{
     position: absolute;
     left: 0;
     right: 0;
@@ -113,4 +111,9 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 10px;
     aspect-ratio: 1.91 / 1;
+}
+
+.newsCarrousel{
+    height: 100%;
+    width: 300%;
 }
