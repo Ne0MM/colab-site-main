@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import styles from './ComponentStyles/ProfileButton.module.css'
 
-export default function profileButton(props) {
+export default function ProfileButton(props) {
 
     if(props.username === undefined) {
 

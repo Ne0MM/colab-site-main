@@ -6,7 +6,7 @@ import StaticLogo from "@/Components/StaticLogo";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
-function login() {
+export default function Login() {
 
     const [authToken, setAuthToken] = useState("NULL");
     const [username, setUsername] = useState("");
@@ -233,5 +233,3 @@ function login() {
     </div>
   )
 }
-
-export default login

@@ -6,7 +6,7 @@ import StaticLogo from '@/Components/StaticLogo';
 import Link from 'next/link';
 import Footer from '@/Components/Footer';
 
-export default function games() {
+export default function Games() {
 
     const [username, setUsername] = useState("");
     const [gameList, setGameList] = useState(undefined);
