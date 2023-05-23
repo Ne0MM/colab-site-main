@@ -1,0 +1,13 @@
+.footer{
+    width: 100%;
+    background-color: #0000007a;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.footer span{
+    margin-top: 2rem;
+    width: 320px;
+    text-align: center;
+}

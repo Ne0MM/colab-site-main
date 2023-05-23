@@ -4,6 +4,7 @@ import LIttleHeader from "@/Components/LIttleHeader";
 import GameListRender from '@/Components/GameListRender';
 import StaticLogo from '@/Components/StaticLogo';
 import Link from 'next/link';
+import Footer from '@/Components/Footer';
 
 export default function games() {
 
@@ -72,6 +73,8 @@ export default function games() {
         </Link>
         
         <GameListRender gameList={gameList}/>
+
+        <Footer/>
 
     </div>
   )
