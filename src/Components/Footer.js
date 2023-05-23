@@ -18,6 +18,7 @@ export default function Footer() {
             height={127}
             width={320}
             className={styles.natalNetImage}
+            alt="Natal net img"
             />
 
         </Link>
