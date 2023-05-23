@@ -75,6 +75,7 @@ export default function Login() {
             ),
             headers : {
                 'Content-Type': 'appication/json',
+                
             },
         })
 
@@ -82,7 +83,7 @@ export default function Login() {
             
             const submitResponse = await token.json();
             submitToken(submitResponse);
-            router.push('/')
+            router.push('/');
 
         }catch(e){
 
